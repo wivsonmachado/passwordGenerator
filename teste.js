@@ -1,6 +1,10 @@
-function password(tam = 8){
+function passwordGenerator(tam = 8){
 
-    caract1 = (min = 64, max = 90) => {
+    // 1 - only letters
+    // 2 - only numbers
+    // 3 - numbers, letters and symbols
+
+    caract1 = (min = 33, max = 122) => {
         let n1 = Math.floor(Math.random() * (max - min) + min)
         let n2 = String.fromCharCode(n1)
         return n2
@@ -15,7 +19,7 @@ function password(tam = 8){
     console.log(stringpass)
 
 }
-password()
-password(10)
-password(15)
-password(20)
+passwordGenerator()
+passwordGenerator(10)
+passwordGenerator(15)
+passwordGenerator(20)
