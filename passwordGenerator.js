@@ -4,20 +4,20 @@ function passwordGenerator(size = 8, charchoice = 1){
         size = 8
     }
         let mixletters = ''
-        let letters = 'abcdefghijklmnopqrstuvwxyz'
+        let letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let numbers = '0123456789'
         let simbols = '!@#$%&*()-_:;,.?[{}]^~+'
-        let uppletters = letters.toUpperCase()
 
         switch(charchoice){
             case 1:
-                mixletters = letters + uppletters
+                mixletters = letters
                 break
             case 2:
-                mixletters = letters + uppletters + numbers
+                mixletters = letters + numbers
                 break
             case 3:
-                mixletters = letters + uppletters + numbers + simbols
+                mixletters = letters + numbers + simbols
+                break
         }
 
         caract1 = (min = 0, max = mixletters.length) => {
@@ -35,6 +35,7 @@ function passwordGenerator(size = 8, charchoice = 1){
     console.log(stringpass)
 
 }
-passwordGenerator(10, 1)
-passwordGenerator(15, 2)
-passwordGenerator(20, 3)
+passwordGenerator(12, 1)
+passwordGenerator(12, 2)
+passwordGenerator(12, 3)
+
