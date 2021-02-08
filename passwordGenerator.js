@@ -1,12 +1,28 @@
-function passwordGenerator(tam = 8){
+function passwordGenerator(size = 8, charchoice = 1){
 
-        if(tam < 8){
-            tam = 8
+    if(size < 8){
+        size = 8
+    }
+        let mixletters = ''
+        let letters = 'abcdefghijklmnopqrstuvwxyz'
+        let numbers = '0123456789'
+        let simbols = '!@#$%&*()-_:;,.?[{}]^~+'
+        let uppletters = letters.toUpperCase()
+
+        switch(charchoice){
+            case 1:
+                mixletters = letters + uppletters
+                break
+            case 2:
+                mixletters = letters + uppletters + numbers
+                break
+            case 3:
+                mixletters = letters + uppletters + numbers + simbols
         }
 
-        caract1 = (min = 33, max = 122) => {
+        caract1 = (min = 0, max = mixletters.length) => {
         let n1 = Math.floor(Math.random() * (max - min) + min)
-        let n2 = String.fromCharCode(n1)
+        let n2 = mixletters.charAt(n1)
         return n2
     }
 
@@ -15,28 +31,10 @@ function passwordGenerator(tam = 8){
     do{
         stringpass = stringpass + `${caract1()}`
         x++
-    }while(x <= tam)
+    }while(x <= size)
     console.log(stringpass)
 
 }
-passwordGenerator(10)
-
-
-//Teste de caracteres sem usar a tabela ASCII
-
-    caract1 = (min = 0, max = 26) => {
-        let numeros = 'abcdefghijklmnopqrstuvwxyz'    
-        let n1 = Math.floor(Math.random() * (max - min) + min)
-        let n2 = numeros.charAt(n1)
-        console.log(n2)
-    }
-    caract2 = (min = 0, max = 26) => {
-        let numeros = 'abcdefghijklmnopqrstuvwxyz'
-        let numUPP = numeros.toUpperCase()    
-        let n1 = Math.floor(Math.random() * (max - min) + min)
-        let n2 = numUPP.charAt(n1)
-        console.log(n2)
-    }
-
-    caract1()
-    caract2()
+passwordGenerator(10, 1)
+passwordGenerator(15, 2)
+passwordGenerator(20, 3)
