@@ -24,6 +24,8 @@ function passwordGenerator(size = 8, charchoice = 1){
             case 3:
                 mixletters = letters + numbers + simbols
                 break
+            case 4:
+                mixletters = letters + simbols
         }
 
 //Function to ramdomize and get chars on string
@@ -83,10 +85,29 @@ if(charchoice == 1){
             stringpass = ''
         }
     }while(m1 == '' || m2 == -1 || m3 == -1)
+}else if(charchoice == 4){
+    do{
+        while(x <= size){
+            stringpass = stringpass + `${caract1()}`
+            x++
+        }
+        while(i <= stringpass.length){
+        m1 = stringpass.charAt(i)
+        m3 = simbols.indexOf(m1)
+        if(m3 !== -1){
+            break
+        }
+        i++
+        }if(m1 == '' || m3 == -1){
+            x = 1
+            i = 0
+            stringpass = ''
+        }
+    }while(m1 == '' || m3 == -1)
 }
 
 console.log(stringpass)
 }
 
 
-passwordGenerator(20, 3)
+passwordGenerator(10, 4)
