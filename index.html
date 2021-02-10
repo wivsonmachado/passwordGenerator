@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <div>
+        <h2>Escolha as opções para gerar sua senha!</h2>
+        <input type="range" min="8" max="30" value="8" class="slider" id="sliderRange">
+        <p>Quantidade de caracteres: <span id="saida"></span></p>
+        <input type="checkbox" id="numeros" onclick="checkNumber()"> Números
+        <input type="checkbox" id="simbolos" onclick="checkNumber()"> Simbolos
+        <br><br>
+        <button onclick="passwordGenerator()">Gerar Senha</button>
+
+    </div>
+<script>
+    var barra = document.getElementById('sliderRange')
+    var saida = document.getElementById('saida')
+    saida.innerHTML = barra.value
+
+    barra.oninput = function(){
+    saida.innerHTML = this.value
+    }
+</script>
+</body>
+</html>

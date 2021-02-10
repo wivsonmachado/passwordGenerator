@@ -89,6 +89,4 @@ console.log(stringpass)
 }
 
 
-passwordGenerator(8, 1)
-passwordGenerator(8, 2)
-passwordGenerator(8, 3)
+passwordGenerator(20, 3)
