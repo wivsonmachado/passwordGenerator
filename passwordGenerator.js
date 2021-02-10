@@ -8,7 +8,11 @@ function passwordGenerator(size = 8, charchoice = 1){
         let letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         let numbers = '0123456789'
         let simbols = '!@#$%&*()-_:;,.?[{}]^~+'
-
+        let x = 1
+        let m1
+        let m2
+        let m3
+        let i = 0
 //Params to choice chars
         switch(charchoice){
             case 1:
@@ -27,54 +31,64 @@ function passwordGenerator(size = 8, charchoice = 1){
         let n1 = Math.floor(Math.random() * (max - min) + min)
         let n2 = mixletters.charAt(n1)
         return n2
-    }
-
-//Loop do while to contruction password based on size of chars
-    let x = 1
-    do{        
+        }
+//Conditional for create password based on size and chars choices
+if(charchoice == 1){
+    while(x <= size){
         stringpass = stringpass + `${caract1()}`
         x++
-    }while(x <= size)
-
-//Loop for to read password constructed
-    let m1 = ''
-    for(i = 0; i <= 12; i++){        
-        m1 = stringpass.charAt(i)
-        //console.log(`${m1} ${mixletters.indexOf(m1) == -1}`)
     }
-
-//Conditional to do right password based on chars choices
-if(charchoice == 1){
-    while(letters.indexOf(m1) == -1){
-        do{
-            stringpass = ''
-            stringpass = stringpass + `${caract1()}`
-            x++
-        }while(x <= size)
-    }
-    console.log(stringpass)
 }else if(charchoice == 2){
-    while(numbers.indexOf(m1) == -1){
-        do{
-            stringpass = ''
+    do{
+        while(x <= size){
             stringpass = stringpass + `${caract1()}`
             x++
-        }while(x <= size)
-    }
-    console.log(stringpass)
+        }
+        while(i <= stringpass.length){
+        m1 = stringpass.charAt(i)
+        m2 = numbers.indexOf(m1)
+        if(m2 !== -1){
+            break
+        }
+        i++
+        }if(m1 == '' || m2 == -1){
+            x = 1
+            i = 0
+            stringpass = ''
+        }
+    }while(m1 == '' || m2 == -1)
 }else if(charchoice == 3){
-    while(simbols.indexOf(m1) == -1 && numbers.indexOf(m1) == -1){
-        do{
-            stringpass = ''
+    do{
+        while(x <= size){
             stringpass = stringpass + `${caract1()}`
             x++
-        }while(x <= size)
-    }
-    console.log(stringpass)
+        }
+        while(i <= stringpass.length){
+        m1 = stringpass.charAt(i)
+        m2 = numbers.indexOf(m1)
+        if(m2 !== -1){
+            break
+        }
+        i++
+        }while(i <= stringpass.length){
+            m1 = stringpass.charAt(i)
+            m3 = simbols.indexOf(m1)
+            if(m3 !== -1){
+                break
+            }
+            i++
+            }if(m1 == '' || m2 == -1 || m3 == -1){
+            x = 1
+            i = 0
+            stringpass = ''
+        }
+    }while(m1 == '' || m2 == -1 || m3 == -1)
 }
 
+console.log(stringpass)
 }
 
-passwordGenerator(12, 1)
-passwordGenerator(12, 2)
-passwordGenerator(12, 3)
+
+passwordGenerator(8, 1)
+passwordGenerator(8, 2)
+passwordGenerator(8, 3)
