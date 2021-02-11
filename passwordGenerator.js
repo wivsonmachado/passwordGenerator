@@ -1,3 +1,29 @@
+function sizeNumber(){
+    var saida = document.getElementById('saida')
+    var size = document.getElementById('sliderRange').value
+    saida.innerHTML = size
+    return size
+}
+
+function checkNumber(){
+      let checkNum = document.getElementById("numeros")
+      let checkSim = document.getElementById("simbolos")
+      let saidacheck = document.getElementById("checked")
+      let typeN
+        if(checkNum.checked && !checkSim.checked){
+            saidacheck.innerHTML = 2
+            return typeN = 2
+        }else if(checkNum.checked && checkSim.checked){
+            saidacheck.innerHTML = 3
+            return typeN = 3
+        }else if(!checkNum.checked && checkSim.checked){
+            saidacheck.innerHTML = 4
+            return typeN = 4
+        }else{
+            saidacheck.innerHTML = ''
+            return typeN = 1
+        }
+}
 function passwordGenerator(size = 8, charchoice = 1){
 
     if(size < 8){
@@ -105,9 +131,7 @@ if(charchoice == 1){
         }
     }while(m1 == '' || m3 == -1)
 }
-
-console.log(stringpass)
+document.getElementById("result").innerHTML = stringpass
+//return stringpass
+//console.log(stringpass)
 }
-
-
-passwordGenerator(10, 4)
