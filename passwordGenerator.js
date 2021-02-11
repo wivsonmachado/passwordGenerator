@@ -8,19 +8,14 @@ function sizeNumber(){
 function checkNumber(){
       let checkNum = document.getElementById("numeros")
       let checkSim = document.getElementById("simbolos")
-      let saidacheck = document.getElementById("checked")
       let typeN
         if(checkNum.checked && !checkSim.checked){
-            saidacheck.innerHTML = 2
             return typeN = 2
         }else if(checkNum.checked && checkSim.checked){
-            saidacheck.innerHTML = 3
             return typeN = 3
         }else if(!checkNum.checked && checkSim.checked){
-            saidacheck.innerHTML = 4
             return typeN = 4
         }else{
-            saidacheck.innerHTML = ''
             return typeN = 1
         }
 }

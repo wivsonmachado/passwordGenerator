@@ -12,37 +12,12 @@
         <h2>Escolha as opções para gerar sua senha!</h2>
         <input type="range" min="8" max="30" value="8" class="slider" id="sliderRange" oninput="sizeNumber()">
         <p>Quantidade de caracteres: <span id="saida"></span></p>
-        <input type="checkbox" id="numeros" onclick="checkNumber()"> Números
-        <input type="checkbox" id="simbolos" onclick="checkNumber()"> Simbolos
-        <p id="checked"></p>
+        <input type="checkbox" id="numeros"> Números
+        <input type="checkbox" id="simbolos"> Simbolos
         <br><br>
         <button onclick="passwordGenerator(sizeNumber(),checkNumber())">Gerar Senha</button>
         <p>Senha: <span id="result"></span></p>
 
     </div>
-<script>
-    /*var barra = document.getElementById('sliderRange')
-    var saida = document.getElementById('saida')
-    saida.innerHTML = barra.value
-
-    barra.oninput = function(){
-    saida.innerHTML = this.value
-    }
-
-    function checkNumber(){
-      let checkNum = document.getElementById("numeros")
-      let checkSim = document.getElementById("simbolos")
-      let saidacheck = document.getElementById("checked")
-        if(checkNum.checked && !checkSim.checked){
-            saidacheck.innerHTML = 2
-        }else if(checkNum.checked && checkSim.checked){
-            saidacheck.innerHTML = 3
-        }else if(!checkNum.checked && checkSim.checked){
-            saidacheck.innerHTML = 4
-        }else{
-            saidacheck.innerHTML = ''
-        }
-    }*/
-</script>
 </body>
 </html>
