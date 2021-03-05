@@ -31,7 +31,7 @@ O aplicativo gera senhas aleatórias com no mínimo 8 caracteres e no máximo 30
 
 * ~~Implementar front-end.~~
 * ~~Separar maiúsculas e minúsculas do código JS para gerar senhas exclusivas com esses dois tipos.~~
-* ~~Coloque as caixas de seleção para maiúsculas e minúsculas.~~
+* ~~Adicionar caixas de seleção para maiúsculas e minúsculas.~~
 ---
 #### :bust_in_silhouette: Autor
 
