@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senha</title>
     <script src="passwordGenerator.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h2>Escolha as opções para gerar sua senha!</h2>
+    <div id="container">
+        <h2 id="titulo">Crie sua senha</h2>
+        <p>Escolha a quantidade de caracteres</p>
         <input type="range" min="8" max="30" value="8" class="slider" id="sliderRange" oninput="sizeNumber()">
-        <p>Quantidade de caracteres: <span id="saida">8</span></p>        
-        <input type="checkbox" id="lower"> Minúsculas
-        <input type="checkbox" id="upper"> Maiúsculas
-        <input type="checkbox" id="numeros"> Números
-        <input type="checkbox" id="simbolos"> Simbolos
+        <span id="saida">8</span></p>
+        <div id="option">
+            <input type="checkbox" id="lower"> Minúsculas
+            <input type="checkbox" id="upper"> Maiúsculas
+            <input type="checkbox" id="numeros"> Números
+            <input type="checkbox" id="simbolos"> Simbolos
+        </div>
+                    
+        
         <br><br>
         <button onclick="passwordGenerator(sizeNumber(),checkNumber())">Gerar Senha</button>
-        <p>Senha: <span id="result"></span></p>
+        <p><span id="result"></span></p>
 
     </div>
 </body>
