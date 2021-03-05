@@ -1,24 +1,35 @@
-#PASSWORD GENERATOR :closed_lock_with_key: 
+# GERADOR DE SENHAS :closed_lock_with_key: 
 ---
 
-### JavaScript app to generate random passwords with letters, numbers and symbols.
+### App JavaScript para gerar senhas aleatórias com letras, números e símbolos.
 
 ---
 
-The app generates random passwords with a minimum of 8 characters and a maximum of 30 characters, passwords with upper and lower case, numeric, alpha-numeric and special characters can be generated.
+O aplicativo gera senhas aleatórias com no mínimo 8 caracteres e no máximo 30 caracteres, senhas com maiúsculas e minúsculas, caracteres numéricos, alfanuméricos e especiais podem ser gerados.
 
-## How to use?
+### :books: Como usar?
 
->1. Use the slider to choose the number of characters.
->2. Choose the characters that will compose the password.
->3. Click the button to generate the password.
+> 1. Use o controle deslizante para escolher o número de caracteres.
+> 2. Escolha os personagens que irão compor a senha.
+> 3. Clique no botão para gerar a senha.
 
-&nbsp;
-##### Version 1.0
+---
+#### :on: Versão 1.0
 <img src="images/front-end_v1.JPG" border="1px solid blue" alt="Versão 1.0"/>
 
-#### Next steps
+#### :soon: Próximos passos
 
-* Modify front-end
-* Separate lower and upper case from JS code to generate unique passwords whit these types
-* Put checkboxes for lower and upper cases
+* Modificar front-end.
+* Separar maiúsculas e minúsculas do código JS para gerar senhas exclusivas com esses dois tipos.
+* Coloque as caixas de seleção para maiúsculas e minúsculas.
+---
+#### :bust_in_silhouette: Autor
+
+ **Wivson Machado**
+
+* Twitter: [@Wivson_Machado](https://twitter.com/Wivson_Machado)
+* Github: [wivsonmachado](https://github.com/wivsonmachado)
+
+#### :busts_in_silhouette: Contribuição
+
+Sinta-se a vontade para contribuir com o código, crie issues e pull requests 
