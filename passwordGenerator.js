@@ -1,9 +1,13 @@
 function copyPass(){
     var senha = document.getElementById("result").innerHTML
+    var alerta = "Senha copiada!"
     navigator.clipboard.writeText(senha)
-    return alert("Senha copiada para sua área de tranferência")
+    document.getElementById("alerta").innerHTML = alerta
 }
 
+function limpaAlerta(){
+   setTimeout(function(){document.getElementById("alerta").innerHTML = ""}, 5000) 
+}
 
 
 function sizeNumber(){
@@ -54,7 +58,7 @@ function checkNumber(){
         }
 }
 function passwordGenerator(size = 8, charchoice){
-
+    document.getElementById("alerta").innerHTML = ""
     if(size < 8){
         size = 8
     }
