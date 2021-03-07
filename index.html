@@ -14,17 +14,25 @@
         <p>Escolha a quantidade de caracteres</p>
         <input type="range" min="8" max="30" value="8" class="slider" id="sliderRange" oninput="sizeNumber()">
         <span id="saida">8</span></p>
-        <div id="option">
-            <input type="checkbox" id="lower"> Minúsculas
-            <input type="checkbox" id="upper"> Maiúsculas
-            <input type="checkbox" id="numeros"> Números
-            <input type="checkbox" id="simbolos"> Simbolos
+        <div id="opcoes">
+            <form id="letras">
+                <input type="checkbox" id="lower">
+                <label for="lower">Minúsculas</label><br>
+                <input type="checkbox" id="upper">
+                <label for="upper">Maiúsculas</label>
+            </form>
+            <form id="num">
+                <input type="checkbox" id="numeros">
+                <label for="numeros">Números</label><br>
+                <input type="checkbox" id="simbolos">
+                <label for="simbolos">Símbolos</label>
+            </form>
         </div>
-                    
-        
-        <br><br>
-        <button onclick="passwordGenerator(sizeNumber(),checkNumber())">Gerar Senha</button>
+        <br>
+        <button onclick="passwordGenerator(sizeNumber(),checkNumber())">Gerar</button>
+        <button onclick="copyPass()">Copiar</button>
         <p><span id="result"></span></p>
+        
 
     </div>
 </body>

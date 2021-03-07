@@ -1,3 +1,11 @@
+function copyPass(){
+    var senha = document.getElementById("result").innerHTML
+    navigator.clipboard.writeText(senha)
+    return alert("Senha copiada para sua área de tranferência")
+}
+
+
+
 function sizeNumber(){
     var saida = document.getElementById('saida')
     var size = document.getElementById('sliderRange').value
