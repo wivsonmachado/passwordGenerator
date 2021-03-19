@@ -14,14 +14,26 @@ O aplicativo gera senhas aleatórias com no mínimo 8 caracteres e no máximo 30
 > 3. Clique no botão para gerar a senha.
 
 ---
-#### :on: Versão 1.1
-<img src="images/front-end_v2.JPG" border="1px solid blue" alt="Versão 1.0"/>
+#### :on: Versão 1.2
+
+https://user-images.githubusercontent.com/75145389/111730240-bc6d3680-884f-11eb-952d-5c7b798ac544.mp4
 
 #### :soon: Próximos passos
 
 * Resolver slider mudando de posição quando passa para 2 algarismos
-* Implementar botão com CSS
-* Implementar verificação de senha força da senha gerada
+* Implementação do Bootstrap
+
+
+---
+#### 🔚: Versão 1.1
+<img src="images/front-end_v2.JPG" border="1px solid blue" alt="Versão 1.0"/>
+
+
+#### :heavy_check_mark: Feito
+
+* Resolver slider mudando de posição quando passa para 2 algarismos
+* ~~Implementar botão com CSS~~
+* ~~Implementar verificação de senha força da senha gerada~~
 
 ---
 #### :end: Versão 1.0
