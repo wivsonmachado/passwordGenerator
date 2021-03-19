@@ -16,7 +16,8 @@ O aplicativo gera senhas aleatórias com no mínimo 8 caracteres e no máximo 30
 ---
 #### :on: Versão 1.2
 
-https://user-images.githubusercontent.com/75145389/111730240-bc6d3680-884f-11eb-952d-5c7b798ac544.mp4
+![exemplo](https://user-images.githubusercontent.com/75145389/111730859-09054180-8851-11eb-831b-76f67e3ee9e2.gif)
+
 
 #### :soon: Próximos passos
 
