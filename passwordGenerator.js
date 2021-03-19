@@ -1,10 +1,9 @@
 function copyPass(){
     var senha = document.getElementById("result").innerHTML
     if(senha !== ''){
-        document.getElementById('score').innerHTML = ''
         var alerta = "Senha copiada!"
         navigator.clipboard.writeText(senha)
-        document.getElementById("alerta").innerHTML = alerta
+        document.getElementById("score").innerHTML = alerta
     }
 
 }
@@ -64,6 +63,12 @@ function checkNumber(){
             return typeN = 0
         }
 }
+
+function mudarScoreBar(value){
+    const progressbar = document.querySelector('.progress-bar');
+    //const value = scoreTotal
+    progressbar.style.setProperty('--progress', value)
+    }
 
 function passwordGenerator(size = 8, charchoice){
     document.getElementById("alerta").innerHTML = ""
@@ -816,13 +821,21 @@ function forcaSenha(){
         document.getElementById("score").innerHTML = `${scoreTotal}%` 
     }
 
-    function mudarScoreBar(){
-        const progressbar = document.querySelector('.progress-bar');
-        const value = scoreTotal
-        progressbar.style.setProperty('--progress', value)
-        }
     
-        mudarScoreBar()
+    
+        mudarScoreBar(scoreTotal)
        
 
+}
+
+function botaoGerar(){
+    if(checkNumber() == 0){
+        document.getElementById('alerta').innerHTML = 'Escolha uma opção!'
+        document.getElementById('score').innerHTML = ''
+        document.getElementById('result').innerHTML = ''
+        mudarScoreBar()
+    }else{
+        passwordGenerator(sizeNumber(), checkNumber())
+        forcaSenha()
+    }
 }
