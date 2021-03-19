@@ -29,12 +29,14 @@
             </form>
         </div>
         <br>
-        <button onclick="passwordGenerator(sizeNumber(),checkNumber())">Gerar</button>
+        <button onclick="passwordGenerator(sizeNumber(), checkNumber()), forcaSenha()">Gerar</button>
         <button onclick="copyPass(); limpaAlerta()">Copiar</button>
-        <p><span id="result"></span></p>
-        <span id="alerta"></span>
-        
-
+        <p><span id="result">&nbsp;</span></p>
+        <div id="statusbar" class="progress-bar"></div>
+        <div id="infos">
+            <span id="score"></span>
+            <span id="alerta"></span>
+        </div>
     </div>
 </body>
 </html>

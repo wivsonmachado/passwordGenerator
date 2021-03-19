@@ -1,11 +1,11 @@
 #container{
     width: 25%;
-    height: 350px;
+    height: 360px;
     background-color:gray;
     color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 #titulo{
@@ -46,4 +46,39 @@ button{
 button:hover{
     background-color: forestgreen;
     
+}
+
+#result{
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+#score{
+    position: relative;
+    top: -20px;
+    text-align: center;
+    align-content: center;
+    color:whitesmoke;
+    font-weight: 600;
+}
+
+.progress-bar{
+    --progress: 0;
+    height: 20px;
+    background-color:gray;
+    display: flex;
+  }
+  
+  .progress-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 45%);
+    transition: all 1s ease;
+  }
+
+#infos{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
