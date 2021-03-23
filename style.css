@@ -1,4 +1,4 @@
-#container{
+/*#container{
     width: 25%;
     height: 360px;
     background-color:gray;
@@ -25,7 +25,7 @@
  }
 
 button{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     border-radius: 8px;
     color: white;
@@ -60,25 +60,26 @@ button:hover{
     align-content: center;
     color:whitesmoke;
     font-weight: 600;
-}
+}*/
 
-.progress-bar{
+.progress-bar-score{
     --progress: 0;
-    height: 20px;
+    height: 30px;
     background-color:gray;
     display: flex;
   }
   
-  .progress-bar::before{
+  .progress-bar-score::before{
     content: "";
     width: calc(var(--progress) * 1%);
     background-color: hsl( calc(var(--progress) * 1.2) , 80%, 45%);
     transition: all 1s ease;
   }
 
-#infos{
+
+/*#infos{
     position: relative;
     display: inline-block;
     text-align: center;
     width: 100%;
-}
+}*/

@@ -1,9 +1,9 @@
 function copyPass(){
     var senha = document.getElementById("result").innerHTML
-    if(senha !== ''){
+    if(senha !== '&nbsp;' || senha !== 'Escolha uma opção!'){
         var alerta = "Senha copiada!"
         navigator.clipboard.writeText(senha)
-        document.getElementById("score").innerHTML = alerta
+        document.getElementById("alerta").innerHTML = alerta
     }
 
 }
@@ -11,7 +11,6 @@ function copyPass(){
 function limpaAlerta(){
    setTimeout(function(){
        document.getElementById("alerta").innerHTML = ""
-       forcaSenha()
 }, 3000) 
 }
 
@@ -65,7 +64,7 @@ function checkNumber(){
 }
 
 function mudarScoreBar(value){
-    const progressbar = document.querySelector('.progress-bar');
+    const progressbar = document.querySelector('.progress-bar-score');
     //const value = scoreTotal
     progressbar.style.setProperty('--progress', value)
     }
@@ -818,7 +817,7 @@ function forcaSenha(){
     }
     //console.log(scoreTotal)
     if(senha !== ''){
-        document.getElementById("score").innerHTML = `${scoreTotal}%` 
+        document.getElementById("score").innerHTML = `Força: ${scoreTotal}%` 
     }
 
     
@@ -830,10 +829,10 @@ function forcaSenha(){
 
 function botaoGerar(){
     if(checkNumber() == 0){
-        document.getElementById('alerta').innerHTML = 'Escolha uma opção!'
-        document.getElementById('score').innerHTML = ''
-        document.getElementById('result').innerHTML = ''
-        mudarScoreBar()
+        document.getElementById('result').innerHTML = 'Escolha uma opção!'
+        document.getElementById('score').innerHTML = '&nbsp;'
+        //document.getElementById('result').innerHTML = ''
+        mudarScoreBar(0)
     }else{
         passwordGenerator(sizeNumber(), checkNumber())
         forcaSenha()
